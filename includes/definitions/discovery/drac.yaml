@@ -172,12 +172,12 @@ modules:
                         - { value: 5, descr: critical, graph: 1, generic: 2 }
                         - { value: 6, descr: nonRecoverable, graph: 1, generic: 2 }
                 -
-                    oid: DELL-RAC-MIB::physicalDiskTable
-                    value: DELL-RAC-MIB::physicalDiskState
-                    num_oid: '.1.3.6.1.4.1.674.10892.2.6.1.20.130.4.1.4.{{ $index }}'
-                    descr: '{{ $DELL-RAC-MIB::physicalDiskName }} State'
+                    oid: IDRAC-MIB-SMIv2::physicalDiskTable
+                    value: IDRAC-MIB-SMIv2::physicalDiskState
+                    num_oid: '.1.3.6.1.4.1.674.10892.5.5.1.20.130.1.{{ $index }}'
+                    descr: '{{ $IDRAC-MIB-SMIv2::physicalDiskName }} State'
                     index: 'physicalDiskStatus.{{ $index }}'
-                    state_name: DELL-RAC-MIB::physicalDiskTable
+                    state_name: IDRAC-MIB-SMIv2::physicalDiskTable
                     states:
                         - { value: 1, descr: unknown, graph: 1, generic: 3 }
                         - { value: 2, descr: ready, graph: 1, generic: 0 }
@@ -190,12 +190,12 @@ modules:
                         - { value: 9, descr: nonrecoverable, graph: 1, generic: 2 }
                         - { value: 10, descr: readonly, graph: 1, generic: 0 }
                 -
-                    oid: DELL-RAC-MIB::controllerTable
-                    value: DELL-RAC-MIB::controllerComponentStatus
-                    num_oid: '.1.3.6.1.4.1.674.10892.2.6.1.20.130.1.1.38.{{ $index }}'
-                    descr: '{{ $DELL-RAC-MIB::controllerName }} {{ $DELL-RAC-MIB::controllerDisplayName }}  State'
+                    oid: IDRAC-MIB-SMIv2::controllerTable
+                    value: IDRAC-MIB-SMIv2::controllerComponentStatus
+                    num_oid: '.1.3.6.1.4.1.674.10892.2.5.1.1.2.{{ $index }}'
+                    descr: '{{ $IDRAC-MIB-SMIv2::controllerName }} {{ $IDRAC-MIB-SMIv2::controllerDisplayName }}  State'
                     index: 'controllerComponentStatus.{{ $index }}'
-                    state_name: DELL-RAC-MIB::controllerTable
+                    state_name: IDRAC-MIB-SMIv2::controllerTable
                     states:
                         - { value: 1, descr: other, graph: 1, generic: 3 }
                         - { value: 2, descr: unknown, graph: 1, generic: 3  }
